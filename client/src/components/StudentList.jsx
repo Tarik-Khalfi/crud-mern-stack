@@ -137,7 +137,7 @@ const StudentList = () => {
                     <tr key={i} className="table-row">
                       <td>
                         <img
-                          src={`https://deploy-mern-crud-098.vercel.app/images/${s.image}`}
+                          src={`https://deploy-mern-crud-098.vercel.app/public/images/${s.image}`}
                           style={{ width: "80px" }}
                         />
                       </td>
