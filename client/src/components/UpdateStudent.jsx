@@ -20,7 +20,7 @@ const UpdateStudent = () => {
   const [adminInfo, setAdminInfo] = useState([]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:8000/students}`)
+    Axios.get(`https://deploy-mern-crud-098.vercel.app/students}`)
       .then((response) => {
         setStudentList(response.data);
       })
