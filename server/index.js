@@ -19,6 +19,7 @@ app.use(
       "https://deploy-mern-crud-098.vercel.app/update-user/:id",
       "https://deploy-mern-crud-098.vercel.app/delete-user/:id",
       "https://deploy-mern-crud-098.vercel.app/admin-info",
+      "https://deploy-mern-crud-098.vercel.app/login",
     ],
     methods: ["POST", "DELETE", "GET", "DELETE", "PUT"],
     credentials: true,
