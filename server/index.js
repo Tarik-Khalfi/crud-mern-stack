@@ -12,16 +12,16 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      // "https://deploy-mern-crud-098.vercel.app",
       "https://crud-mern-front-three.vercel.app",
-      "https://crud-mern-front-three.vercel.app/add",
-      "https://crud-mern-front-three.vercel.app/getImage",
-      "https://crud-mern-front-three.vercel.app/getImage",
-      "https://crud-mern-front-three.vercel.app/students",
-      "https://crud-mern-front-three.vercel.app/update-user/:id",
-      "https://crud-mern-front-three.vercel.app/delete-user/:id",
-      "https://crud-mern-front-three.vercel.app/admin-info",
-      "https://crud-mern-front-three.vercel.app/login",
+      "https://deploy-mern-crud-098.vercel.app",
+      // "https://crud-mern-front-three.vercel.app/add",
+      // "https://crud-mern-front-three.vercel.app/getImage",
+      // "https://crud-mern-front-three.vercel.app/getImage",
+      // "https://crud-mern-front-three.vercel.app/students",
+      // "https://crud-mern-front-three.vercel.app/update-user/:id",
+      // "https://crud-mern-front-three.vercel.app/delete-user/:id",
+      // "https://crud-mern-front-three.vercel.app/admin-info",
+      // "https://crud-mern-front-three.vercel.app/login",
       "https://deploy-mern-crud-098.vercel.app/add",
       "https://deploy-mern-crud-098.vercel.app/getImage",
       "https://deploy-mern-crud-098.vercel.app/students",
@@ -35,7 +35,7 @@ app.use(
   })
 );
 mongoose.connect(
-  "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/crud-project?retryWrites=true&w=majority"
 );
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
