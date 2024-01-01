@@ -27,7 +27,7 @@ const AddStudent = () => {
 
     try {
       const response = await Axios.post(
-        "https://crud-mern-front-three.vercel.app/add",
+        "https://deploy-mern-crud-098.vercel.app/add",
         formData
       );
       console.log(response);
