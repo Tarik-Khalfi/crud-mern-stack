@@ -9,11 +9,21 @@ const path = require("path");
 const app = express();
 app.use(express.static("public"));
 app.use(express.json());
-app.use(cors({
-  origin:["https://crud-mern-front-three.vercel.app"],
-  methods:["POST","DELETE","GET","DELETE","PUT"],
-  credentials:true
-}));
+app.use(
+  cors({
+    origin: [
+      "https://crud-mern-front-three.vercel.app",
+      "https://deploy-mern-crud-098.vercel.app/add",
+      "https://deploy-mern-crud-098.vercel.app/getImage",
+      "https://deploy-mern-crud-098.vercel.app/students",
+      "https://deploy-mern-crud-098.vercel.app/update-user/:id",
+      "https://deploy-mern-crud-098.vercel.app/delete-user/:id",
+      "https://deploy-mern-crud-098.vercel.app/admin-info",
+    ],
+    methods: ["POST", "DELETE", "GET", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 mongoose.connect(
   "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/?retryWrites=true&w=majority"
 );
