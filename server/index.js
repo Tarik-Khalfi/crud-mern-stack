@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://deploy-mern-crud-098.vercel.app",
+      // "https://deploy-mern-crud-098.vercel.app",
       "https://crud-mern-front-three.vercel.app",
       "https://crud-mern-front-three.vercel.app/add",
       "https://crud-mern-front-three.vercel.app/getImage",
