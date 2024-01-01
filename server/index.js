@@ -10,7 +10,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json());
 app.use(cors({
-  origin:["https://crud-mern-front-three.vercel.app","https://crud-mern-front-three.vercel.app/add","https://crud-mern-front-three.vercel.app/studens","https://crud-mern-front-three.vercel.app/getImage","https://crud-mern-front-three.vercel.app/register","https://crud-mern-front-three.vercel.app/login","https://crud-mern-front-three.vercel.app/update-user/:id","https://crud-mern-front-three.vercel.app/delete-user/:id","https://crud-mern-front-three.vercel.app/admin-info","https://deploy-mern-crud-098.vercel.app/add"],
+  origin:["https://crud-mern-front-three.vercel.app"],
   methods:["POST","DELETE","GET","DELETE","PUT"],
   credentials:true
 }));
