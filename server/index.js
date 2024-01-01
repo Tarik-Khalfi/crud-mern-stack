@@ -103,7 +103,7 @@ app.post("/login", async (req, res) => {
   }
   const checkPwd = await bcrypt.compare(adminPwd, checkAdmin.password);
   if (checkPwd) {
-    res.send("garanted acces");
+    res.send("granted acces!");
   } else {
     res.send("incorrect password");
   }
