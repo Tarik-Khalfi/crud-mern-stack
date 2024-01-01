@@ -35,7 +35,7 @@ app.use(
   })
 );
 mongoose.connect(
-  "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/crud-project?retryWrites=true&w=majority"
+  "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/test?retryWrites=true&w=majority"
 );
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
