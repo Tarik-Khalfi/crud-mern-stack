@@ -30,7 +30,7 @@ app.use(
       "https://deploy-mern-crud-098.vercel.app/admin-info",
       "https://deploy-mern-crud-098.vercel.app/login",
     ],
-    methods: ["POST", "DELETE", "GET", "DELETE", "PUT"],
+    methods: ["POST", "DELETE", "GET", "DELETE", "PUT", "PATCH"],
     credentials: true,
   })
 );
