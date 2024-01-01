@@ -26,8 +26,11 @@ const AddStudent = () => {
     formData.append("phone", phone);
 
     try {
-      const response = await Axios.post("https://deploy-mern-crud-098.vercel.app/add", formData);
-        console.log(response)
+      const response = await Axios.post(
+        "https://crud-mern-front-three.vercel.app/add",
+        formData
+      );
+      console.log(response);
       const studentsResponse = await Axios.get(
         "https://deploy-mern-crud-098.vercel.app/students"
       );
