@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: [
       "https://crud-mern-front-three.vercel.app",
-      "https://deploy-mern-crud-098.vercel.app",
+      // "https://deploy-mern-crud-098.vercel.app",
       "https://crud-mern-front-three.vercel.app/add",
       "https://crud-mern-front-three.vercel.app/getImage",
       "https://crud-mern-front-three.vercel.app/getImage",
@@ -64,7 +64,7 @@ app.post("/add", upload.single("file"), async (req, res) => {
       enrollNumber,
       image,
     });
-
+    console.log(student);
     res.send("New student has been added");
   } catch (err) {
     console.error(err);
