@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(cors());
 mongoose.connect(
-  "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/test?retryWrites=true&w=majority"
 );
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
