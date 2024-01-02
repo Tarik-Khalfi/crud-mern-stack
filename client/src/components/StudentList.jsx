@@ -12,7 +12,7 @@ const StudentList = () => {
   const [adminInfo, setAdminInfo] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    Axios.get("http://localhost:8000/students")
+    Axios.get("https://deploy-mern-crud-098.vercel.app/students")
       .then((response) => {
         console.log(response);
         setStudentList(response.data);
@@ -22,10 +22,10 @@ const StudentList = () => {
       });
   }, []);
   const deleteStudent = (id) => {
-    Axios.delete(`http://localhost:8000/delete-user/${id}`)
+    Axios.delete(`https://deploy-mern-crud-098.vercel.app/delete-user/${id}`)
       .then((response) => {
         console.log(response.data);
-        Axios.get("http://localhost:8000/students")
+        Axios.get("https://deploy-mern-crud-098.vercel.app/students")
           .then((response) => {
             setStudentList(response.data);
           })
@@ -38,7 +38,7 @@ const StudentList = () => {
       });
   };
   useEffect(() => {
-    Axios.get("http://localhost:8000/admin-info")
+    Axios.get("https://deploy-mern-crud-098.vercel.app/admin-info")
       .then((res) => {
         console.log(res.data);
         setAdminInfo(res.data);
@@ -137,7 +137,7 @@ const StudentList = () => {
                     <tr key={i} className="table-row">
                       <td>
                         <img
-                          src={`http://localhost:8000/images/${s.image}`}
+                          src={`https://deploy-mern-crud-098.vercel.app/public/images/${s.image}`}
                           style={{ width: "80px" }}
                         />
                       </td>

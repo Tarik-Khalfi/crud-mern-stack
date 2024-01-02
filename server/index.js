@@ -9,7 +9,31 @@ const path = require("path");
 const app = express();
 app.use(express.static("public"));
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://crud-mern-front-three.vercel.app",
+      "https://deploy-mern-crud-098.vercel.app",
+      "https://crud-mern-front-three.vercel.app/add",
+      // "https://crud-mern-front-three.vercel.app/getImage",
+      // "https://crud-mern-front-three.vercel.app/getImage",
+      "https://crud-mern-front-three.vercel.app/students",
+      // "https://crud-mern-front-three.vercel.app/update-user/:id",
+      // "https://crud-mern-front-three.vercel.app/delete-user/:id",
+      // "https://crud-mern-front-three.vercel.app/admin-info",
+      // "https://crud-mern-front-three.vercel.app/login",
+      "https://deploy-mern-crud-098.vercel.app/add",
+      // "https://deploy-mern-crud-098.vercel.app/getImage",
+      // "https://deploy-mern-crud-098.vercel.app/students",
+      // "https://deploy-mern-crud-098.vercel.app/update-user/:id",
+      // "https://deploy-mern-crud-098.vercel.app/delete-user/:id",
+      // "https://deploy-mern-crud-098.vercel.app/admin-info",
+      // "https://deploy-mern-crud-098.vercel.app/login",
+    ],
+    methods: ["POST", "DELETE", "GET", "DELETE", "PUT", "PATCH"],
+    credentials: true,
+  })
+);
 mongoose.connect(
   "mongodb+srv://tarik:tarik@cluster0.dxik4tm.mongodb.net/test?retryWrites=true&w=majority"
 );
@@ -40,7 +64,7 @@ app.post("/add", upload.single("file"), async (req, res) => {
       enrollNumber,
       image,
     });
-
+    console.log(student);
     res.send("New student has been added");
   } catch (err) {
     console.error(err);
@@ -79,7 +103,7 @@ app.post("/login", async (req, res) => {
   }
   const checkPwd = await bcrypt.compare(adminPwd, checkAdmin.password);
   if (checkPwd) {
-    res.send("garanted acces");
+    res.send("granted access!");
   } else {
     res.send("incorrect password");
   }
