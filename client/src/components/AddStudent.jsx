@@ -27,12 +27,15 @@ const AddStudent = () => {
 
     try {
       const response = await Axios.post(
-        "https://deploy-mern-crud-098.vercel.app/add",
+        // "https://deploy-mern-crud-098.vercel.app/add",
+        "http://localhost:8000/add"
         formData
       );
       console.log(response);
       const studentsResponse = await Axios.get(
-        "https://deploy-mern-crud-098.vercel.app/students"
+        // "https://deploy-mern-crud-098.vercel.app/students"
+        "http://localhost:8000/students"
+        
       );
       setStudentList(studentsResponse.data);
       navigate("/students");
@@ -42,7 +45,11 @@ const AddStudent = () => {
   };
 
   useEffect(() => {
-    Axios.get("https://deploy-mern-crud-098.vercel.app/admin-info")
+    Axios.get(
+      // "https://deploy-mern-crud-098.vercel.app/admin-info"
+        "http://localhost:8000/admin-info"
+      
+    )
       .then((res) => {
         console.log(res.data);
         setAdminInfo(res.data);
