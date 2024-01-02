@@ -8,7 +8,10 @@ const Login = () => {
   const [password, setPassowrd] = useState("");
   const login = async () => {
     try {
-      const res = await Axios.post("https://deploy-mern-crud-098.vercel.app/login", {
+      const res = await Axios.post(
+        // "https://deploy-mern-crud-098.vercel.app/login"
+           "http://localhost:8000/login"
+        , {
         email: email,
         password: password,
       });
