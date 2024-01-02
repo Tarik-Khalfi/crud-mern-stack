@@ -20,7 +20,10 @@ const UpdateStudent = () => {
   const [adminInfo, setAdminInfo] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://deploy-mern-crud-098.vercel.app/students}`)
+    Axios.get(
+      // `https://deploy-mern-crud-098.vercel.app/students`
+      "http://localhost:8000/students"
+    )
       .then((response) => {
         setStudentList(response.data);
       })
@@ -29,7 +32,10 @@ const UpdateStudent = () => {
       });
   }, [id]);
   useEffect(() => {
-    Axios.get(`https://deploy-mern-crud-098.vercel.app/students/${id}`)
+    Axios.get(
+      // `https://deploy-mern-crud-098.vercel.app/students/${id}`
+            `http://localhost:8000/students/${id}`
+    )
       .then((response) => {
         setUserData(response.data);
       })
@@ -38,7 +44,10 @@ const UpdateStudent = () => {
       });
   }, [id]);
   const updateStudent = () => {
-    Axios.put(`https://deploy-mern-crud-098.vercel.app/update-user/${id}`, userData)
+    Axios.put(
+      // `https://deploy-mern-crud-098.vercel.app/update-user/${id}`
+      `http://localhost:8000/update-user/${id}`
+      , userData)
       .then((response) => {
         console.log(response.data);
       })
@@ -48,7 +57,10 @@ const UpdateStudent = () => {
     navigate("/students");
   };
   useEffect(() => {
-    Axios.get("https://deploy-mern-crud-098.vercel.app/admin-info")
+    Axios.get(
+      // "https://deploy-mern-crud-098.vercel.app/admin-info"
+              "http://localhost:8000/admin-info"
+    )
       .then((res) => {
         console.log(res.data);
         setAdminInfo(res.data);
